@@ -9,13 +9,14 @@
 #NO SBATCH --ntasks-per-node 16
 #NO SBATCH --mem 24000
 
-GENOME=../B73V4.both_pseudo_AND_unplaced.fa
+GENOME=/users/jdaly8/oat/oat4.correctedReads.fasta
 
-module load blast/2.2.26
-export PATH=$PATH:/home/mstitzer/software/bin
-export PATH=$PATH:/home/mstitzer/projects/agpv4_te_annotation/tir/mTEA/lib/blogo/
+module load blast
+#module load perl5
+export PATH=$PATH:/users/jdaly8/bin
+#export PATH=$PATH:/home/mstitzer/projects/agpv4_te_annotation/tir/mTEA/lib/blogo/
 #export $PERL5LIB
-export PERL5LIB=$PERL5LIB:/home/mstitzer/projects/agpv4_te_annotation/tir/mTEA/lib/blogo/
+#export PERL5LIB=$PERL5LIB:/home/mstitzer/projects/agpv4_te_annotation/tir/mTEA/lib/blogo/
 
 FILES=($(ls -1 line_references/RI*_*))
 
